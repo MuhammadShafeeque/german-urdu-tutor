@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+# German-Urdu Language Tutor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive React-based language learning application designed specifically for Urdu speakers learning German. This interactive tutor provides vocabulary, grammar lessons, conversation practice, and AI-powered chat features.
+
+## Features
+
+### 🔍 **Advanced Search Functionality**
+
+- **Multi-language Search**: Search in German, English, Urdu, and Roman Urdu
+- **Smart Filtering**: Filter by difficulty levels (A1, A2, B1, B2)
+- **Content Type Search**: Search across vocabulary, grammar lessons, and conversation scenarios
+- **Real-time Results**: Instant search results with relevance scoring
+- **Quick Navigation**: Click on search results to jump directly to relevant content
+
+### 📚 **Vocabulary Learning**
+
+- Comprehensive German vocabulary organized by CEFR levels
+- Roman Urdu pronunciations for accurate pronunciation
+- Interactive practice mode with immediate feedback
+- Progress tracking and scoring system
+
+### 📖 **Grammar Lessons**
+
+- Structured grammar lessons for each proficiency level
+- Clear explanations with examples
+- Urdu translations for better comprehension
+- Interactive expandable content
+
+### 💬 **Conversation Practice**
+
+- Real-world conversation scenarios
+- Step-by-step phrase practice
+- Multiple difficulty levels
+- Cultural context integration
+
+### 🤖 **AI Chat Tutor**
+
+- Practice conversations with AI feedback
+- Personalized learning recommendations
+- Error correction and tips
+- Multi-language support
+
+### 📊 **Progress Tracking**
+
+- Points and streak system
+- Accuracy measurements
+- Learning milestones
+- Personal achievement tracking
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/german-urdu-tutor.git
+cd german-urdu-tutor
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+
+### Quick Start (Windows)
+
+1. Double-click `fix-and-start.bat` to automatically install and start the application
+2. Or double-click `install.bat` first, then `start.bat`
+
+### Troubleshooting
+
+If you encounter Tailwind CSS compilation errors:
+
+1. Run the fix script: `fix-and-start.bat`
+2. Or manually: Delete `node_modules` and `package-lock.json`, then run `npm install`
+3. See `TAILWIND_FIX.md` for detailed troubleshooting steps
+
+## How to Use the Search Feature
+
+### Basic Search
+
+1. Use the search bar in the header for quick searches
+2. Type in any language (German, English, Urdu, Roman Urdu)
+3. View instant dropdown results with previews
+
+### Advanced Search
+
+1. Navigate to "Search - تلاش" from the sidebar
+2. Use the main search input for detailed searches
+3. Apply filters:
+   - **Levels**: Select specific CEFR levels (A1-B2)
+   - **Languages**: Choose which languages to search in
+   - **Content Types**: Filter by vocabulary, grammar, or conversations
+4. Click on any result to navigate directly to that content
+
+### Search Tips
+
+- Search for specific German words: "Hallo", "Familie"
+- Search for English meanings: "family", "greetings"
+- Search for Urdu translations: "خاندان", "سلام"
+- Search for Roman Urdu: "hallo", "familia"
+- Search for grammar topics: "articles", "verbs", "cases"
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
+The page will reload when you make changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React 19.1.0**: Modern React with hooks
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Beautiful icons
+- **JavaScript ES6+**: Modern JavaScript features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+src/
+├── App.js              # Main application component with search functionality
+├── App.css             # Tailwind CSS and custom styles
+├── index.js            # Application entry point
+└── index.css           # Global styles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+public/
+├── index.html          # HTML template
+├── manifest.json       # PWA manifest
+└── favicon.ico         # Application icon
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Language Support
 
-### Code Splitting
+- **German**: Primary target language
+- **English**: Interface and translations
+- **Urdu**: Native language support with RTL text
+- **Roman Urdu**: Pronunciation guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## CEFR Levels Covered
 
-### Analyzing the Bundle Size
+- **A1**: Basic greetings, family, numbers
+- **A2**: Food, colors, everyday vocabulary
+- **B1**: Emotions, abstract concepts
+- **B2**: Advanced vocabulary and grammar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Make your changes and commit: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Enhancements
 
-### Advanced Configuration
+- [ ] Audio pronunciation with native speakers
+- [ ] Spaced repetition algorithm for vocabulary
+- [ ] Offline mode support
+- [ ] Mobile app version
+- [ ] Progress synchronization across devices
+- [ ] Advanced AI conversation practice
+- [ ] Cultural context lessons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgments
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- German vocabulary sourced from CEFR guidelines
+- Urdu translations verified by native speakers
+- UI inspiration from modern language learning platforms

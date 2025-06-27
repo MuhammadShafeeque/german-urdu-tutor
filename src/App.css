@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations and styles */
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0,-1px,0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Custom scrollbar for chat */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .w-80 {
+    width: 100%;
+  }
+}
+
+/* Urdu text styling */
+[style*="direction: rtl"] {
+  font-family: 'Noto Sans Urdu', sans-serif;
+  text-align: right;
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Button press animation */
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Loading animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Chat message animations */
+.message-appear {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+@keyframes messageSlideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vocabulary card animations */
+.vocab-card {
+  transition: all 0.3s ease;
+}
+
+.vocab-card:hover {
+  transform: scale(1.02);
+}
+
+/* Practice mode styling */
+.practice-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grammar content styling */
+.grammar-content {
+  line-height: 1.7;
+}
+
+.grammar-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+  color: #374151;
+}
+
+.grammar-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  color: #4b5563;
+}
+
+.grammar-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.grammar-content th,
+.grammar-content td {
+  border: 1px solid #d1d5db;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.grammar-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.grammar-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .w-80 {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .w-80.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+/* Custom focus styles */
+input:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+.transform {
+  transform: translateZ(0);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
   }
 }
