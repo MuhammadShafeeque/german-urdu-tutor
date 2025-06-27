@@ -531,7 +531,16 @@ const GermanUrduTutor = () => {
         <div className="p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <BookOpen className="h-8 w-8" />
+              <img 
+                src="/logo1.png" 
+                alt="German-Urdu Tutor Logo" 
+                className="h-8 w-8 object-contain rounded-full"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextElementSibling.style.display = 'block';
+                }}
+              />
+              <BookOpen className="h-8 w-8 hidden" />
               <div>
                 <h1 className="text-xl font-bold">German für Urdu</h1>
                 <p className="text-blue-100 text-sm">جرمن زبان سیکھیں</p>

@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "German-Urdu Tutor",
+  "name": "German-Urdu Language Learning App",
+  "description": "Learn German with Urdu translations, pronunciation guides, and interactive exercises",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +9,34 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo1.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "logo1.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2563eb",
+  "background_color": "#f0f9ff",
+  "categories": ["education", "language", "learning"],
+  "lang": "en-US",
+  "author": "Muhammad Shafeeque",
+  "developer": {
+    "name": "Muhammad Shafeeque",
+    "url": "https://github.com/muhammadshafeeque"
+  },
+  "version": "1.0.0",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "id": "german-urdu-tutor",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }
